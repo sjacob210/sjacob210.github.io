@@ -10,7 +10,7 @@ window.onload=function(){ with (new XMLHttpRequest()) {
 function cb(){if(this.readyState===4)document.getElementById('main')
                                              .innerHTML=tbl(this.responseText); }
 function tbl(csv){ // do whatever is necessary to create your table here ...
- return csv.split('\n')
+ return csv.split(',')
            .map(function(tr,i){return '<tr><td>'
                                      +tr.replace(/\t/g,'</td><td>')
                                      +'</td></tr>';})
