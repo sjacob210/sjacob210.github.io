@@ -1,33 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <style>
-            table {
-                border-collapse: collapse;
-                border: 2px black solid;
-                font: 12px sans-serif;
-            }
-
-            td {
-                border: 1px black solid;
-                padding: 5px;
-            }
-        </style>
-    </head>
-    <body>
-<script>
-window.onload=function(){ with (new XMLHttpRequest()) {
-  onreadystatechange=cb; open('GET','data.csv',true); responseType='text';send();
-}}
-function cb(){if(this.readyState===4)document.getElementById('main')
-                                             .innerHTML=tbl(this.responseText); }
-function tbl(csv){ // do whatever is necessary to create your table here ...
- return csv.split('\n')
-           .map(function(tr,i){return '<tr><td>'
-                                     +tr.replace(/,/g,'</td><td>')
-                                     +'</td></tr>';})
-           .join('\n'); }
-</script>
-</body>
+<meta charset='utf-8'>
+<html>
+  <head>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+    <script type='text/javascript' src='script.js'></script>
+  </body>
 </html>
