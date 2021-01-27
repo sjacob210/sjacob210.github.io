@@ -1,22 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <style>
-            table {
-                border-collapse: collapse;
-                border: 2px black solid;
-                font: 12px sans-serif;
-            }
-
-            td {
-                border: 1px black solid;
-                padding: 5px;
-            }
-        </style>
-    </head>
-    <body>
-    <script src="https://d3js.org/d3.v6.js"></script>
+<html>
+<head>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+</head>
+<body>
     <script type="text/javascript"charset="utf-8">
         d3.text("data.csv", function(datasetText) {
 
@@ -41,6 +28,6 @@ var sampleHTML = d3.select("#viz")
     .text(function(d){return d;})
     .style("font-size", "12px");
 });
-    </script>
+</script>
 </body>
 </html>
